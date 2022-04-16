@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -9,6 +9,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 
+import LoginPage from './pages/LoginPage'
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -34,7 +35,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-          <div></div>
+        <LoginPage></LoginPage>
         </>
       </Router>
     </ApolloProvider>
