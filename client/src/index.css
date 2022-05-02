@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(./assets/lotr-bg.jpeg) no-repeat center center fixed; 
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.quote {
+  font-family: fantasy;
+  color: wheat;
+  max-width: 350px;
+  width: fit-content;
+  position: absolute;
+  top: 400px;
+  left: 570px;
+  font-size: larger;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+

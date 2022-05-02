@@ -12,6 +12,7 @@
     "graphql": "^15.5.1",
     "graphql-tag": "^2.12.5",
     "jwt-decode": "^2.2.0",
+    "random-lotr-movie-quote": "^1.1.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",

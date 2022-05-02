@@ -15,7 +15,7 @@ const AppNavbar = () => {
       <Navbar bg='dark' variant='dark' expand='lg'>
         <Container fluid>
           <Navbar.Brand as={Link} to='/'>
-            When Ya Gotta Go                
+            LOTR App               
 
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
@@ -23,14 +23,15 @@ const AppNavbar = () => {
           <Navbar.Collapse id='navbar'>
             <Nav className='ml-auto'>
               <Nav.Link as={Link} to='/'>
-                Search For Restrooms
+                
+              </Nav.Link>
+              <Nav.Link as={Link} to='/characters'>
+                Characters
               </Nav.Link>
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
-                  <Nav.Link as={Link} to='/saved'>
-                    Your rooms
-                  </Nav.Link>
+                  
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (

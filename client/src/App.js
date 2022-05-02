@@ -8,8 +8,9 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 
-
-import LoginPage from './pages/LoginPage'
+import Navbar from './components/Navbar'
+import HomePage from './pages/HomePage'
+import Characters from './pages/Characters'
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -35,7 +36,11 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <>
-        <LoginPage></LoginPage>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={HomePage} />
+          <Route exact path='/characters' component={Characters} />
+        </Switch>
         </>
       </Router>
     </ApolloProvider>
